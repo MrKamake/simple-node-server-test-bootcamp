@@ -1,3 +1,5 @@
+![nodejs](/main.jpg)
+
 # Simple Node Server
 
 이번에는 Node.js / Express Framework를 이용하여 웹 서버 구현을 해보고, Database 연동까지 해보는 과제입니다.
