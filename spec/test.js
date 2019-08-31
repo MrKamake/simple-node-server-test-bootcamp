@@ -335,6 +335,9 @@ README.md를 참고하여 아래 세 가지를 반드시 완료한 후, 다음 �
 - run MongoDB locally
 - connect to MongoDB from express using `mongoose`
 
+추가적으로 MongoDB Shell 또한 사용해보고 진행하시면 더 좋습니다.
+https://docs.mongodb.com/manual/mongo/#working-with-the-mongo-shell
+
 위 단계를 완료한 후, MongoDB 서버를 실행한 상태에서 아래 테스트를 실행시키셔야 합니다.
 
 */
