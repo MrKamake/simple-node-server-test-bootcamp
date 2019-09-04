@@ -33,7 +33,7 @@ describe('GET /', () => {
 - https://expressjs.com/en/starter/static-files.html
 
 */
-describe.skip('GET static assets', () => {
+describe('GET static assets', () => {
   it('should be able to get static css file', done => {
     request(app)
       .get('/stylesheets/style.css')
@@ -64,7 +64,7 @@ describe.skip('GET static assets', () => {
 3. Handling POST request
 
 */
-describe.skip('POST /', () => {
+describe('POST /', () => {
   it('should respond with success template', done => {
     const randomString = randomstring.generate();
 
@@ -87,7 +87,7 @@ describe.skip('POST /', () => {
 4. Redirect
 
 */
-describe.skip('GET /google', () => {
+describe('GET /google', () => {
   it('should redirect to google', done => {
     request(app)
       .get('/google')
@@ -106,7 +106,7 @@ describe.skip('GET /google', () => {
 - https://expressjs.com/ko/guide/error-handling.html
 
 */
-describe.skip('GET /non-valid-url', () => {
+describe('GET /non-valid-url', () => {
   it('should respond with error template', done => {
     const randomString = randomstring.generate();
 

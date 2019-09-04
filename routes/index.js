@@ -14,6 +14,7 @@ const APPLICATION_TITLE = 'Express';
 */
 router.get('/', (req, res, next) => {
   // Your code here..
+  res.send(APPLICATION_TITLE);
 });
 
 /*
@@ -23,6 +24,7 @@ router.get('/', (req, res, next) => {
 */
 router.post('/', (req, res, next) => {
   // Your code here..
+  res.status(201).render('Success', { message: req.body.title });
 });
 
 /*
@@ -35,6 +37,7 @@ router.post('/', (req, res, next) => {
 */
 router.get('/google', (req, res, next) => {
   // Your code here..
-})
+  res.redirect('www.google.com');
+});
 
 module.exports = router;
