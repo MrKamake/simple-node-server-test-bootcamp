@@ -129,7 +129,7 @@ describe('GET /non-valid-url', () => {
 - Serving JSON
 
 */
-describe.skip('GET /users', () => {
+describe('GET /users', () => {
   it('should respond with users list json', done => {
     request(app)
       .get('/users')
@@ -150,7 +150,7 @@ describe.skip('GET /users', () => {
 - Serving JSON
 
 */
-describe.skip('POST /users', () => {
+describe('POST /users', () => {
   it('should add new user', done => {
     request(app)
       .post('/users')
@@ -174,7 +174,7 @@ describe.skip('POST /users', () => {
 - Response Status
 
 */
-describe.skip('PUT /users/:user_id', () => {
+describe('PUT /users/:user_id', () => {
   it('should update existing user', done => {
     request(app)
       .put('/users/4')
@@ -213,7 +213,7 @@ describe.skip('PUT /users/:user_id', () => {
 - Serving JSON
 
 */
-describe.skip('DELETE /user/:user_id', () => {
+describe('DELETE /user/:user_id', () => {
   it('should delete user', done => {
     request(app)
       .delete('/users/1')
@@ -251,7 +251,7 @@ describe.skip('DELETE /user/:user_id', () => {
 - JWT (jsonwebtoken)
 
 */
-describe.skip('GET /user/:user_id/token', () => {
+describe('GET /user/:user_id/token', () => {
   it('should not generate token to invalid user', done => {
     request(app)
       .get('/users/332/token')
@@ -287,7 +287,7 @@ describe.skip('GET /user/:user_id/token', () => {
 - Basic Security
 
 */
-describe.skip('GET /user/:user_id/secret', () => {
+describe('GET /user/:user_id/secret', () => {
   it('should not allow invalid token', done => {
     const userId = USERS[0].id;
 
@@ -341,7 +341,7 @@ https://docs.mongodb.com/manual/mongo/#working-with-the-mongo-shell
 위 단계를 완료한 후, MongoDB 서버를 실행한 상태에서 아래 테스트를 실행시키셔야 합니다.
 
 */
-describe.skip('With mongoDB database', () => {
+describe('With mongoDB database', () => {
   const mongoose = require('mongoose');
   const db = mongoose.connection;
   const Article = require('../models/Article');
@@ -388,7 +388,7 @@ describe.skip('With mongoDB database', () => {
   12-1. [MongoDB] Reading an article
 
   */
-  describe.skip('GET /articles', () => {
+  describe('GET /articles', () => {
     beforeEach(fetchAllArticles);
     afterEach(deleteAllArticles);
 
@@ -417,7 +417,7 @@ describe.skip('With mongoDB database', () => {
   12-2. [MongoDB] Creating an article
 
   */
-  describe.skip('POST /articles/new', () => {
+  describe('POST /articles/new', () => {
     beforeEach(fetchAllArticles);
     afterEach(deleteAllArticles);
 
@@ -523,7 +523,7 @@ describe.skip('With mongoDB database', () => {
   12-3. [MongoDB] Updating an article
 
   */
-  describe.skip('PUT /articles/:article_id', () => {
+  describe('PUT /articles/:article_id', () => {
     beforeEach(fetchAllArticles);
     afterEach(deleteAllArticles);
 
@@ -655,7 +655,7 @@ describe.skip('With mongoDB database', () => {
   12-4. [MongoDB] Deleting an article
 
   */
-  describe.skip('DELETE /articles/:article_id', () => {
+  describe('DELETE /articles/:article_id', () => {
     beforeEach(fetchAllArticles);
     afterEach(deleteAllArticles);
 

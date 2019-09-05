@@ -4,11 +4,20 @@ const index = require('./routes/index');
 const articles = require('./routes/articles');
 const users = require('./routes/users').router;
 const bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('몽곻ㅎ')
+});
 
 const app = express();
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
 /*
 
   Route Setup
